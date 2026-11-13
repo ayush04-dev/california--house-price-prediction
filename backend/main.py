@@ -22,18 +22,17 @@ app = FastAPI(
 # --------------------------------------------------
 # 2. Configure CORS
 # --------------------------------------------------
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "http://127.0.0.1:5173"
+        "http://127.0.0.1:5173",
+        "https://california-house-price-prediction-iota.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 # --------------------------------------------------
 # 3. Load trained ML model
